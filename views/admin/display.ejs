@@ -1,0 +1,88 @@
+
+<%- include('../front/header.ejs') %>
+<a class="btn btn-warning" href="/admin/dashboard">Back To Dashboard</a>
+
+<section class="dashboard-wrap mtb-40">
+    <div class="container">
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-2">
+                   
+                </div>
+                <div class="col-md-9" >
+                    <div class="dash-right">
+                        <div class="dash-header">
+                            <div class="dash-title">
+                                <h1>Registration Data</h1>
+                            </div>
+                            <!-- <div class="dash-nav">
+                                <a href="/admin/addblogs" class="btn a">Add Blog</a>
+                            </div> -->
+                        </div>
+                        <div class="table table-responsive">
+                        <table class="table   table-bordered table-striped"  >
+                            <tr>
+                                <th>S.no</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Mothaer Name</th>
+                                <th>Father Name</th>
+                                <th>Mobile</th>
+                                <th>D.O.B.</th>
+                                <th>Pincode</th>
+                                <th>Course</th>
+                                <th>Address</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr> 
+                            
+                            <% var i = 0 %>
+
+                            <% d.forEach((item)=>{ i++ %>
+                                
+                                <tr>
+                                    <td><%= i%></td>
+                                    <td><%= item.Firstname%></td> 
+                                    <td><%= item.lastname%></td>
+                                    <td><%= item.Mothername%></td>
+                                    <td><%= item.Fathername%></td>
+                                    <td><%= item.mobile%></td>
+                                    <td><%= item.DOB%></td>
+                                    <td><%= item.pincode%></td>
+                                    <td><%= item.course%></td> 
+                                    <td><%= item.Adderess%></td> 
+                                    <td><%= item.email%></td>
+                                    <td><%= item.Status%></td>
+                                
+                               
+                                        <td>
+                                           <a href="/admin/view/<%= item._id %>" class="btn btn-success btn-sm mx-3">View</a> 
+                                           <a href="/admin/edit/<%= item._id%>" class="btn btn-info btn-sm mx-3 mt-1">Edit</a>
+                                           
+                                        </td>
+
+                                        
+                                        
+                              </tr>
+
+
+                           <% }) %>
+                            
+                         
+                            
+                            
+                        </table>
+                    </div>
+                    </div>   
+                </div>
+                <div class="col-md-1">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br><br>
+
+<%- include ('../front/footer.ejs') %>
