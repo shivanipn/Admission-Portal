@@ -85,7 +85,7 @@ class DeshController{
                 })
                 await result.save()
                 req.flash('success','Registration successfully' )
-                return res.redirect('front/SingleData3')
+                return res.redirect('front/SingleData2')
 
             }catch(error){
                 console.log(error)
@@ -130,7 +130,7 @@ class DeshController{
                 })
                 await result.save()
                 req.flash('success','Registration successfully' )
-                return res.redirect('front/SingleData2')
+                return res.redirect('front/SingleData3')
 
             }catch(error){
                 console.log(error)

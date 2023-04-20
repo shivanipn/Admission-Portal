@@ -3,7 +3,7 @@ const UserModel = require('../models/user')
 
 const Authrole = (roles)=>{
     return (req,res,next)=>{
-        if(!roles.includes(rq.data1.roles)){
+        if(!roles.includes(req.data1.roles)){
             return next(res.redirect('/admin/dashboard'))
         }
         next()

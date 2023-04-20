@@ -63,11 +63,11 @@ class StudentController {
     const data = await StudentModel.findOne({Filledemail:email, course: "M.Tech" });
 
     //  console.log(data)
-    res.render("front/SingleData3", { ViewData:data, n: name });
+    res.render("front/SingleData3", { ViewData:data,n:name });
   };
   static BCourse = async (req, res) => {
     const { name } = req.data1;
-    res.render("admin/btech", { message: req.flash("error"), n: name });
+    res.render("admin/btech", { message: req.flash("error"), n:name });
   };
   static Display3 = async (req, res) => {
     const { name,email } = req.data1;
